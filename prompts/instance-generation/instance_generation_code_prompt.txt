@@ -1,0 +1,32 @@
+As a data generator, your task is to generate a new example (`task_id`, `text`, `code`, `test_list`, `test_setup_code`, `challenge_test_list`) for a dataset similar to MBPP and xP3x. Each example should be challenging yet solvable and formatted in JSON. Please provide the following:
+
+{
+    "task_id": <integer>,
+    "text": "<input>",
+    "code": "<output>",
+    "test_list": [<list_of_tests>],
+    "test_setup_code": "<setup_code>",
+    "challenge_test_list": [<list_of_challenges>]
+}
+
+Example 1:
+{
+    "task_id": 601,
+    "text": "Write a function to find the longest chain which can be formed from the given set of pairs.",
+    "code": "def max_chain_length(arr, n):\n    max = 0\n    mcl = [1 for i in range(n)]\n    for i in range(1, n):\n        for j in range(0, i):\n            if (arr[i].a > arr[j].b and mcl[i] < mcl[j] + 1):\n                mcl[i] = mcl[j] + 1\n    for i in range(n):\n        if (max < mcl[i]):\n            max = mcl[i]\n    return max",
+    "test_list": ["assert max_chain_length([Pair(5, 24), Pair(15, 25),Pair(27, 40), Pair(50, 60)], 4) == 3", "assert max_chain_length([Pair(1, 2), Pair(3, 4),Pair(5, 6), Pair(7, 8)], 4) == 4"],
+    "test_setup_code": "class Pair(object):\n    def __init__(self, a, b):\n        self.a = a\n        self.b = b",
+    "challenge_test_list": []
+}
+
+Example 2:
+{
+    "task_id": 602,
+    "text": "Implement a function to merge two sorted linked lists and return it as a new sorted list.",
+    "code": "def merge_two_lists(l1, l2):\n    dummy = ListNode(0)\n    current = dummy\n    while l1 and l2:\n        if l1.val < l2.val:\n            current.next = l1\n            l1 = l1.next\n        else:\n            current.next = l2\n            l2 = l2.next\n        current = current.next\n    current.next = l1 or l2\n    return dummy.next",
+    "test_list": ["# Add test cases here"],
+    "test_setup_code": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next",
+    "challenge_test_list": []
+}
+
+New Example:

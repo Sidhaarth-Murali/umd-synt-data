@@ -1,0 +1,27 @@
+As a data generator, your task is to generate a new example (`conversations` and `source`) for a dataset similar to LIMA. Each example should be mindful, original, factual and formatted in JSON. Please provide the following:
+
+{
+    "conversations": ["<input>", "<output>"],
+    "source": "<source_information>"
+}
+
+Example 1:
+{
+    "conversations": [
+        "Can brain cells move? By movement I mean long distance migration (preferably within the brain only).",
+        "Yes, brain cells such as glial cells and neuronal stem cells can migrate within the brain. For example, oligodendrocytes migrate to form the myelin sheath around axons."
+    ],
+    "source": "Scientific Research Paper"
+}
+
+Example 2:
+{
+    "conversations": [
+        "How does climate change affect polar bears?",
+        "Climate change leads to the melting of sea ice habitats, making it harder for polar bears to hunt seals. This results in malnutrition and decreased population numbers."
+    ],
+    "source": "Environmental Study"
+}
+
+New Example:
+

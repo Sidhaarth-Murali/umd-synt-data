@@ -1,0 +1,20 @@
+As a data generator, your task is to generate a new example (`question` and `answer`) for a dataset similar to GSM8K and MATH. Each example should be challenging yet solvable and formatted in JSON. Please provide the following:
+
+{
+    "question": "<input>",
+    "answer": "<output>"
+}
+
+Example 1:
+{
+    "question": "What is the derivative of sin(x)?",
+    "answer": "The derivative of sin(x) is cos(x)."
+}
+
+Example 2:
+{
+    "question": "Solve for x: 2x + 3 = 7.",
+    "answer": "Subtracting 3 from both sides gives 2x = 4, so x = 2."
+}
+
+New Example:
